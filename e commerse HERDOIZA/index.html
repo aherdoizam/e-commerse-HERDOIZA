@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Tienda</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>🛍️ Electronic Art</h1>
+    <button onclick="verCarrito()">
+      🛒 Carrito (<span id="contador">0</span>)
+    </button>
+  </header>
+
+  <!-- PRODUCTOS -->
+  <main id="productos">
+
+    <div class="producto">
+      <img src="img/producto1.jpg" alt="PlayStation 5">
+      <h3>PlayStation 5</h3>
+      <p>$550</p>
+      <button onclick="agregarCarrito('PlayStation 5', 550)">Agregar</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/producto2.jpeg" alt="Xbox Series X">
+      <h3>Xbox Series X</h3>
+      <p>$450</p>
+      <button onclick="agregarCarrito('Xbox Series X', 450)">Agregar</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/producto3.jpg" alt="Nintendo Switch">
+      <h3>Nintendo Switch</h3>
+      <p>$300</p>
+      <button onclick="agregarCarrito('Nintendo Switch', 300)">Agregar</button>
+    </div>
+
+  </main>
+
+  <!-- CARRITO -->
+  <div id="carrito" class="oculto">
+    
+    <div class="carrito-header">
+      <h2>🛒 Carrito</h2>
+      <button id="btnCerrar">❌</button>
+    </div>
+
+    <ul id="listaCarrito"></ul>
+    <p>Total: $<span id="total">0</span></p>
+
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
